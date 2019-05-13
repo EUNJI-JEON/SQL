@@ -164,7 +164,45 @@ select * from student order by distance asc;
 
 
 ## Index
+### primary key
+#### 테이블 전체를 통틀어서 중복되지 않는 값을 지정해야 한다.
+#### where 문을 이용해서 데이터를 조회할 때 가장 고속으로 데이터를 가져올 수 있다.
+#### 테이블마다 딱 하나의 primary key를 가질 수 있다.
+select * from student where id=3;
 
+### Unique key
+#### 테이블 전체를 통틀어서 중복되지 않는 값을 지정해야 한다. (== primary key)
+#### 고속으로 데이터를 가져올 수 있다.
+#### 여러개의 unique key를 지정할 수 있다.
+select * from student where number=0534543;
+
+### Normal key
+#### 중복을 허용한다.
+#### primary, unique 보다 속도가 느리다.
+#### 여러개의 키를 지정할 수 있다.
+select * from student where department='Business'
+
+### Full Text
+#### mysql의 기본설정(ft_min_word_len)이 4로 되어 있기 때문에 최소 4글자 이상을 입력하거나 이 값을 조정해야 한다.
+#### mysql은 전문 검색 엔진이 아니기 때문에 한글 검색이 잘 안된다.
+#### 전문검색엔진으로 lucene, sphinx 참고
+#### 스토리지 엔진 중 myisam에서만 사용가능
+#### AGAINST('매치할 값')
+SELECT introduction, MATCH(introduction) AGAINST('major in Business') FROM student WHERE MATCH (introduction) AGAINST('major in Business');
+
+### Overlapping key
+#### 하나의 키에 여러개의 칼럼을 포함
+select * from student where department='Business' AND address='Jeju';
 
 ## Join
+### Join Types
+#### Outer Join & Inner Join
+##### OUTTER JOIN : 매칭되는 행이 없어도 결과를 가져오고 매칭되는 행이 없는 경우 NULL로 표시한다. LEFT JOIN과 RIGHT JOIN이 있다.
+##### INNER JOIN : 조인하는 두개의 테이블 모두에 데이터가 존재하는 행에 대해서만 결과를 가져온다.
+SELECT s.name, s.location_id, l.name AS address, l.distance  FROM student AS s LEFT JOIN location AS l ON s.location_id = l.id;
+SELECT s.name, s.location_id, l.name AS address, l.distance  FROM student AS s INNER JOIN location AS l ON s.location_id = l.id;
+
+![1861](./image/1861.png)
+#### Left Join
+SELECT s.name, s.location_id, l.name AS address, l.distance  FROM student AS s LEFT JOIN location AS l ON s.location_id = l.id;
 
