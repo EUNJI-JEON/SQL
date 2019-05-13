@@ -119,3 +119,52 @@ TRUNCATE student;
 DROP TABLE table_name;
 
 DROP TABLE student;
+
+## SELECT
+### SELECT FROM
+SELECT * FROM student;
+
+SELECT name, birthday FROM student;
+
+### SELECT WHERE + AND/OR
+SELECT * FROM student WHERE id=3;
+
+SELECT * FROM student WHERE sex='남자' AND address='서울';
+
+SELECT * FROM student WHERE sex='여자' OR address='서울';
+
+### SELECT LIMIT (limit the length of the data)
+
+SELECT * FROM student LIMIT 1;
+
+SELECT * FROM student WHERE sex='male' LIMIT 2;
+
+### LIMIT + {start index(count from 0), length(number) of data} : 
+SELECT * FROM student LIMIT 1,1; 
+
+SELECT * FROM student LIMIT 2,1;
+
+SELECT * FROM student LIMIT 3,1;
+
+
+## Group By
+SELECT * FROM table_name GROUP BY a column for grouping
+
+select gender from student group by gender;
+
+select gender,sum(distance), avg(distance) from student group by gender;
+
+## Order
+### desc(descendent) : reverse order(e.g. latest order, from biggest) of data (<-> asc(ascendent)) 
+SELECT * FROM table_name ORDER BY a standard column for order [DESC | ASC]
+
+select * from student order by distance desc;
+
+select * from student order by distance asc;
+
+
+## Index
+
+
+## Join
+
