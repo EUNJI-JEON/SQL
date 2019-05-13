@@ -36,12 +36,19 @@ DROP TABLE `the name of table`
 CHAR( ) :	put 0 to 255 of strings in (), immutable 
 
 VARCHAR( ) : put	0~65535 of strings in (), mutable
+
 TINYTEXT: The max length of string is 255 
+
 TEXT: The max length of string is	65535 
+
 BLOB	The max length of string is 65535
+
 MEDIUMTEXT:	The max length of string is 16777215 
+
 MEDIUMBLOB:	The max length of string is 16777215 
+
 LONGTEXT:	The max length of string is 4294967295 
+
 LONGBLOB:	The max length of string is 4294967295 
 
 
