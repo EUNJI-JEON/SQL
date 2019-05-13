@@ -203,6 +203,8 @@ SELECT s.name, s.location_id, l.name AS address, l.distance  FROM student AS s L
 
 SELECT s.name, s.location_id, l.name AS address, l.distance  FROM student AS s INNER JOIN location AS l ON s.location_id = l.id;
 
+###### 위 쿼리문에서 s.는 student의 축약형(student AS s) l.은 location의 축약형(location AS l)
+
 ![1861](./image/1861.png)
 
 #### Left Join
