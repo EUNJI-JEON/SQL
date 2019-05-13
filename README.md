@@ -100,3 +100,21 @@ UPDATE `student` SET address='seoul';
 UPDATE `student` SET name='elena' WHERE id=1;
 
 UPDATE `student` SET name='eunji', birthday='2001-4-1' WHERE id=3;
+
+## Delete Data(row data)
+DELETE FROM 테이블명 [WHERE column=value]
+
+DELETE FROM student WHERE id = 2;
+
+## Truncate
+### Delete all the datas in the table
+### If there is no foreign key, this is a faster way than using 'delete' code
+TRUNCATE table_name
+
+TRUNCATE student;
+
+## DROP TABLE
+
+DROP TABLE table_name;
+
+DROP TABLE student;
