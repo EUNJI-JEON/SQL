@@ -82,3 +82,11 @@ ENUM ( )	fixed values
 
 SET	 
 
+### Insert Data into Table
+INSERT INTO table_name VALUES (value1, value2, value3,...)
+
+INSERT INTO table_name (column1, column2, column3,...) VALUES (value1, value2, value3,...)
+
+INSERT INTO `student` VALUES ('2', 'leezche', '여자', '서울', '2000-10-26');
+
+INSERT INTO `student` (`id`, `name`, `sex`, `address`, `birthday`) VALUES ('1', 'egoing', '남자', 'seoul', '2000-11-16');
