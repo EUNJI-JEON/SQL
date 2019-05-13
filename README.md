@@ -51,4 +51,34 @@ LONGTEXT:	The max length of string is 4294967295
 
 LONGBLOB:	The max length of string is 4294967295 
 
+TINYINT( ):	-128 ~ 127 integers (SIGNED)/
+0 ~ 255 integers, UNSIGNED
+
+SMALLINT( ):-32768 ~ 32767, integers (SIGNED)/
+0 ~ 65535, integers, UNSIGNED
+
+MEDIUMINT( )	-8388608 to 8388607, integers /
+0 to 16777215 , integers, UNSIGNED
+
+INT( )	-2147483648 ~ 2147483647 integers /
+0 ~ 4294967295, integers, UNSIGNED
+
+BIGINT( )	-9223372036854775808 ~ 9223372036854775807, integers /
+0 ~ 18446744073709551615, integers, UNSIGNED.
+
+FLOAT: 작은 부동 소숫점
+
+DOUBLE( , ) : 큰 부동 소숫점
+
+DATE	YYYY-MM-DD.
+
+DATETIME	YYYY-MM-DD HH:MM:SS.
+
+TIMESTAMP	YYYYMMDDHHMMSS.
+
+TIME	HH:MM:SS.
+
+ENUM ( )	fixed values
+
+SET	 
 
