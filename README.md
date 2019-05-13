@@ -90,3 +90,13 @@ INSERT INTO table_name (column1, column2, column3,...) VALUES (value1, value2, v
 INSERT INTO `student` VALUES ('2', 'leezche', '여자', '서울', '2000-10-26');
 
 INSERT INTO `student` (`id`, `name`, `sex`, `address`, `birthday`) VALUES ('1', 'egoing', '남자', 'seoul', '2000-11-16');
+
+
+## Update Data
+UPDATE table_name SET column1=new value, column2=new value WHERE index=value
+
+UPDATE `student` SET address='seoul';
+
+UPDATE `student` SET name='elena' WHERE id=1;
+
+UPDATE `student` SET name='eunji', birthday='2001-4-1' WHERE id=3;
