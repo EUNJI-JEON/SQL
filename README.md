@@ -28,7 +28,7 @@ CREATE TABLE `student` (
 );
 ### Show table list
 SHOW tables;
-### Show table schema
+### Show table schema(theble structure)
 DESC `name of table`
 ### Drop the table
 DROP TABLE `the name of table`
