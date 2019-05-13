@@ -200,9 +200,13 @@ select * from student where department='Business' AND address='Jeju';
 ##### OUTTER JOIN : 매칭되는 행이 없어도 결과를 가져오고 매칭되는 행이 없는 경우 NULL로 표시한다. LEFT JOIN과 RIGHT JOIN이 있다.
 ##### INNER JOIN : 조인하는 두개의 테이블 모두에 데이터가 존재하는 행에 대해서만 결과를 가져온다.
 SELECT s.name, s.location_id, l.name AS address, l.distance  FROM student AS s LEFT JOIN location AS l ON s.location_id = l.id;
+
 SELECT s.name, s.location_id, l.name AS address, l.distance  FROM student AS s INNER JOIN location AS l ON s.location_id = l.id;
 
 ![1861](./image/1861.png)
+
 #### Left Join
 SELECT s.name, s.location_id, l.name AS address, l.distance  FROM student AS s LEFT JOIN location AS l ON s.location_id = l.id;
 
+
+origin:https://www.opentutorials.org/course/195/1409
